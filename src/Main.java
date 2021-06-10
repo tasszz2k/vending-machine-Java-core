@@ -17,7 +17,6 @@ public class Main {
         while(true){
             vmm.run();
         }
-
     }
 
     /**
@@ -28,7 +27,6 @@ public class Main {
     public static VendingMachine prepareData() {
         ProductManagement productManagement = new ProductManagement();
         Map<Product, Integer> productQuantityMap = productManagement.fakeDataProductMap();
-        productQuantityMap.put(new Product(1, "Coke", 10000), 15);
         VendingMachine vendingMachine = new VendingMachine(1, "Vending Machine 1", productQuantityMap, 2000000);
         return vendingMachine;
     }

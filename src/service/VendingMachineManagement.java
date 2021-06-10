@@ -64,6 +64,10 @@ public class VendingMachineManagement {
         System.out.println();
     }
 
+    /**
+     * Show all products
+     *
+     */
     public void showAllProduct() {
         Map<Product, Integer> productQuantityMap = vendingMachine.getProductQuantityMap();
         System.out.println("\n-------------\n" +
@@ -78,6 +82,11 @@ public class VendingMachineManagement {
         System.out.println("-------------");
     }
 
+    /**
+     * Select products
+     *
+     * @return selected products map
+     */
     private Map<Product, Integer> selectProducts() {
         Map<Product, Integer> productQuantityMap = vendingMachine.getProductQuantityMap();
         Map<Product, Integer> selectedProducts = new HashMap<>();
@@ -133,6 +142,11 @@ public class VendingMachineManagement {
         return balance >= total;
     }
 
+    /**
+     * Recalculate Vending Machine & update data
+     *
+     * @param selectedProducts
+     */
     private void recalculate(Map<Product, Integer> selectedProducts) {
         Map<Product, Integer> productQuantityMap = vendingMachine.getProductQuantityMap();
         selectedProducts.forEach((product, quantity) -> {
